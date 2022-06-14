@@ -1,6 +1,6 @@
 from logging import PlaceHolder
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, PasswordField, \
+from wtforms import StringField, SubmitField, IntegerField, PasswordField, \
     BooleanField
 from wtforms.validators import DataRequired, Length, Email, Regexp, EqualTo, \
     ValidationError
@@ -38,28 +38,28 @@ class RegistrationForm(FlaskForm):
 
 
 class MeanScore(FlaskForm):
-    term = StringField(
+    term = IntegerField(
         'Term',
         validators=[DataRequired()],
         render_kw={"placeholder": 'e.g. "1"'})
-    math = StringField(
+    math = IntegerField(
         'Math',
         validators=[DataRequired()],
-        render_kw={"placeholder": 'e.g. "66.98"'})
-    english = StringField(
+        render_kw={"placeholder": 'e.g. "66"'})
+    english = IntegerField(
         'English',
         validators=[DataRequired()],
-        render_kw={"placeholder": 'e.g. "66.98"'})
-    science = StringField(
+        render_kw={"placeholder": 'e.g. "66"'})
+    science = IntegerField(
         'Science',
         validators=[DataRequired()],
-        render_kw={"placeholder": 'e.g. "66.98"'})
-    ict = StringField(
+        render_kw={"placeholder": 'e.g. "66"'})
+    ict = IntegerField(
         'ICT',
         validators=[DataRequired()],
-        render_kw={"placeholder": 'e.g. "66.98"'})
-    history = StringField(
+        render_kw={"placeholder": 'e.g. "66"'})
+    history = IntegerField(
         'History',
         validators=[DataRequired()],
-        render_kw={"placeholder": 'e.g. "66.98"'})
+        render_kw={"placeholder": 'e.g. "66"'})
     submit = SubmitField('Submit')
