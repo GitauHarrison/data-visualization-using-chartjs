@@ -59,7 +59,7 @@ $ mkvirtualenv venv # using virtualenvwrapper
 Install project requirements in the virtual environment:
 
 ```python
-(venv)$ pip install -r requirements.txt
+(venv)$ pip3 install -r requirements.txt
 ```
 
 Run the application:
