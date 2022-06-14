@@ -15,6 +15,7 @@ This is a sample flask app for a classroom teacher to understand the performance
 - Python for programming
 - ChartJS for the charts
 <br>
+
 - SQLite for the database
 - SQLAlchemy for the ORM
 - Flask-migrate for database migrations
@@ -30,8 +31,8 @@ This is a sample flask app for a classroom teacher to understand the performance
 ## Live Deployment Usage
 
 You can [log in](https://simple-chartjs-demo.herokuapp.com/login) as a pre-created teacher using the following credentials:
-- Email: rahima@test.com
-- Password: rahima
+- Email: chico@test.com
+- Password: chico
 
 Alternatively, you can [register](https://simple-chartjs-demo.herokuapp.com/register) your own user.
 
