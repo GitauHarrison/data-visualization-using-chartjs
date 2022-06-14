@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_context %}
+<div class="row">
+    <div class="col-md-4">
+        <h1>Update Class Meanscore</h1>
+        {{ wtf.quick_form(form) }}
+        <hr>
+        <h1>Results</h1>
+        Terms: {{ terms }}<br>
+        Math: {{  math }}<br>
+        English: {{ english }}<br>
+        Science: {{ science }}<br>
+        ICT: {{ ict }}<br>
+        History: {{ history }}
+    </div>
+    <div class="col-md-8">
+        <h1>Visualize Class Meanscore</h1>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</div>
+{% endblock %}
+
+{% block app_scripts %}
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [
+                {% for term in terms %}
+                    'Term {{ term }}',
+                {% endfor %}
+            ],
+            datasets: [{
+                label: 'Math',
+                data: [
+                    {% for math_score in math %}
+                        {{ math_score }},
+                    {% endfor %}
+                ],
+                backgroundColor: ['white'],
+                borderColor: ['teal'],
+                borderWidth: 1
+            }, {
+                label: 'English',
+                data: [
+                    {% for english_score in english %}
+                        {{ english_score }},
+                    {% endfor %}
+                ],
+                backgroundColor: ['purple'],
+                borderColor: ['red'],
+            }, {
+                label: 'Science',
+                data: [
+                    {% for science_score in science %}
+                        {{ science_score }},
+                    {% endfor %}
+                ],
+                backgroundColor: ['black'],
+                borderColor: ['cyan'],
+            }, {
+                label: 'ICT',
+                data: [
+                    {% for ict_score in ict %}
+                        {{ ict_score }},
+                    {% endfor %}
+                ],
+                backgroundColor: ['orange'],
+                borderColor: ['pink'],
+            }, {
+                label: 'History',
+                data: [
+                    {% for history_score in history %}
+                        {{ history_score }},
+                    {% endfor %}
+                ],
+                backgroundColor: ['green'],
+                borderColor: ['yellow'],
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+{% endblock %}
