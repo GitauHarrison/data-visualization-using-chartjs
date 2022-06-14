@@ -28,11 +28,11 @@ class User(UserMixin, db.Model):
 class Meanscore(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     term = db.Column(db.String(64))
-    math = db.Column(db.Integer)
-    english = db.Column(db.Integer)
-    science = db.Column(db.Integer)
-    ict = db.Column(db.Integer)
-    history = db.Column(db.Integer)
+    math = db.Column(db.String(64))
+    english = db.Column(db.String(64))
+    science = db.Column(db.String(64))
+    ict = db.Column(db.String(64))
+    history = db.Column(db.String(64))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
