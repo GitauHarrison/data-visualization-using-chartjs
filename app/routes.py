@@ -39,8 +39,6 @@ def index():
         science.append(term.science)
         ict.append(term.ict)
         history.append(term.history)
-    print(terms)
-    print(math)
     return render_template(
         'index.html',
         form=form,
