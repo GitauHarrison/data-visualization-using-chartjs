@@ -26,7 +26,7 @@ This is a sample flask app for a classroom teacher to understand the performance
 
 ## Deployment
 
-- [Simple chartjs demo](https://simple-chartjs-demo.herokuapp.com/) - Heroku
+- ~~[Simple chartjs demo](https://simple-chartjs-demo.herokuapp.com/) - Heroku~~ (heroku app is down)
 - [Simple chartjs demo](https://chartjs-demo.onrender.com) - Render
 
 ## Live Deployment Usage
